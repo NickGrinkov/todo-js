@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right, #F6EFD2, #CEAD78);
+    color: aliceblue;
+    min-height: 100vh;
+    font-size: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+header, form {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+}
+
+form button {
+    color: #CEAD78;
+}
+
+form button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #CEAD78;
+}
+
+.todo_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo_list {
+    min-width: 31%;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+
+.todo_li {
+    flex: 1;
+    margin: 0 0.3rem;
+}
+
+.todo_btn_check, .todo_btn_trash {
+    background: #CEAD78;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.todo_btn_check {
+    background: lightgreen;
+}
+
+.todo_btn_trash:hover {
+    background: white;
+    color: #CEAD78;
+}
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.fall {
+    opacity: 0;
+    transform: translateY(8rem) rotateZ(20deg);
+}
+
+select {
+    border: none;
+    outline: none;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.select::after {
+    content: '\25BC';
+    pointer-events: none;
+    position: absolute;
+    background: #CEAD78;
+    padding: 0.5rem;
+    top: 0;
+    right: 0;
+}
+
+.select:hover::after {
+    background: white;
+    color: #CEAD78;
+}
+
